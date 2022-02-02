@@ -1,14 +1,14 @@
 <h1>Affichage toutes les cartes</h1>
-<div class="row">
-  <div class="col-md-4">
-    <div class="container" *ngFor="let card of cards">
+
+<div class="container">
+  <div class="row">
+    <div *ngFor="let card of cards" class="col">
       <p>
         {{ card.toString() }}
       </p>
     </div>
   </div>
 </div>
-
 <button (click)="onDistribute()">Distribuer les cartes</button>
 <div class="container" *ngFor="let player of players">
   <ul>
@@ -17,3 +17,5 @@
     </li>
   </ul>
 </div>
+<button (click)="onPli()">Jouer un pli</button>
+<p>Le gagant de ce pli : {{pliWinner.name}}</p>
