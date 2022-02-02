@@ -1,0 +1,19 @@
+<h1>Affichage toutes les cartes</h1>
+<div class="row">
+  <div class="col-md-4">
+    <div class="container" *ngFor="let card of cards">
+      <p>
+        {{ card.toString() }}
+      </p>
+    </div>
+  </div>
+</div>
+
+<button (click)="onDistribute()">Distribuer les cartes</button>
+<div class="container" *ngFor="let player of players">
+  <ul>
+    <li>
+      {{ player.toString() }}
+    </li>
+  </ul>
+</div>
